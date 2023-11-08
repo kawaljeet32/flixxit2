@@ -6,12 +6,7 @@ const app=express()
 const UserRoutes = require("./routes/UserRoutes")
 const PORT = process.env.PORT || 5000
 
-app.use(
-  cors({
-    origin: ["https://flixxit-sable.vercel.app", "http://localhost:3000"],
-    credentials: true,
-  })
-);
+app.use(cors());
 app.use(express.json())
 
 
